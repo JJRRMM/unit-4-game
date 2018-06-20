@@ -53,9 +53,11 @@
   // Now for the hard part. Creating multiple crystals each with their own unique number value.
 
   // We begin by expanding our array to include four options.
+//   function InitializeCrystal {
   var numberOptions = [10, 5, 3, 7];
 
   // Next we create a for loop to create crystals for every numberOption.
+  
   for (var i = 0; i < numberOptions.length; i++) {
 
     // For each iteration, we will create an imageCrystal
@@ -76,7 +78,9 @@
     // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
     $("#crystals").append(imageCrystal);
   }
-    $("#total_score").text("Total Score: " + counter);
+
+   
+    $("#total_score").text("Your Total Score is : " + counter);
     $("#Wins_str").text("Wins:   " + wins );
     $("#Loss_str").text("Losses:  " + losses);
 
@@ -94,11 +98,10 @@
     // Every click, from every crystal adds to the global counter.
     counter += crystalValue;
     // $("#total_score").text(" total score some text")
-    $("#total_score").text("Total Score: " + counter);
+    $("#total_score").text("Your Total Score is : " + counter);
     $("#Wins_str").text("Wins:   " + wins );
     $("#Loss_str").text("Losses:  " + losses);
-    
-    
+        
    
     // All of the same game win-lose logic applies. So the rest remains unchanged.
     // alert("New score: " + counter);
@@ -120,14 +123,12 @@
         targetNumber = Math.floor(Math.random()*100) +19;
         counter=0;
         $("#number-to-guess").text(targetNumber);  
+                 
     }
-       
-        
+               
     //   alert("You lose!!");
     });
-
-  
-
+          
   </script>
 </body>
 </html>
